@@ -1,0 +1,19 @@
+.cards {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 400px;
+    min-width: 300px;
+}
+
+.choose {
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
