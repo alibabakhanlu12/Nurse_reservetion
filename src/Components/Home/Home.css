@@ -1,0 +1,93 @@
+.title_ourservises {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.p-ourservises {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 70px;
+}
+
+.our_servises {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+
+}
+
+.servise1,
+.servise2,
+.servise3 {
+    width: 330px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 400px;
+
+}
+
+.title_s1,
+.title_s2,
+.title_s3 {
+    text-align: center;
+}
+
+.p-s1,
+.p-s2,
+.p-s3 {
+    width: 280px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+
+}
+
+.i-s1,
+.i-s2,
+.i-s3 {
+    text-align: center;
+}
+
+.title_topnurses {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.nurse_1,
+.nurse_2,
+.nurse_3,
+.nurse_4,
+.nurse_5 {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nurse1,
+.nurse2,
+.nurse3,
+.nurse4,
+.nurse5 {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media(max-width:930px) {
+    .our_servises {
+        display: flex;
+        flex-direction: column;
+    }
+}
