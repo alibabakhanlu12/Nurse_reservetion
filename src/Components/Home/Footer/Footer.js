@@ -54,9 +54,9 @@ function Footer() {
                     <ul >
                         <h4>Contact with Us</h4>
                         <li><BsFillTelephoneFill />  Phone Number:+98914121243</li>
-                        <li><FaMapMarkerAlt /> Addres:Univercity </li>
-                        <li><MdEmail />  Email:Hospital@info.com</li>
-                        <li><FaFax /> Fax:+13434345</li>
+                        <li><FaMapMarkerAlt /> Addres:University of Tabriz </li>
+                        <li><MdEmail />  Email:info@hospital.com</li>
+                        <li><FaFax /> Fax:041 1431 8851</li>
                     </ul>
 
                 </div>
