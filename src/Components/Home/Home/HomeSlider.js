@@ -49,9 +49,9 @@ function HomeSlider() {
                     style={{ background: `url('${item.image}') no-repeat center center` }}
                 >
                     <div className='center'  >
-                        <h1 className='title'>{item.title}</h1>
+                        <h1 className='title1'>{item.title}</h1>
                         <p className='description'>{item.description}</p>
-                        <button className='btn'> <Link to={item.button.link}>{item.button.name}</Link></button>
+                        <button className='btn11'> <Link to={item.button.link}>{item.button.name}</Link></button>
                     </div>
                 </div>
             ))}

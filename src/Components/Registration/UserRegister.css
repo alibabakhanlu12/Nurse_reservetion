@@ -36,7 +36,7 @@ a {
     max-width: 1100px;
     min-height: 670px;
     position: relative;
-    /* // background: url('https://globalhealtheducation.com/sites/default/files/image/2020-05/the-future-of-nursing-02.jpg') no-repeat center; */
+    background: url('https://globalhealtheducation.com/sites/default/files/image/2020-05/the-future-of-nursing-02.jpg') no-repeat center;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
@@ -197,6 +197,11 @@ a {
     transform: rotate(0);
 }
 
+.input-date {
+    padding: 20px 30px;
+
+}
+
 .hr {
     height: 2px;
     margin: 60px 0 50px 0;
@@ -205,6 +210,7 @@ a {
 
 .foot-lnk {
     text-align: center;
+    margin-top: -100px;
 }
 
 .first-row {
@@ -243,4 +249,9 @@ a {
     flex-direction: column;
     margin-top: 25%;
 
+}
+
+.inputs {
+    background-color: #fff;
+    color: black;
 }

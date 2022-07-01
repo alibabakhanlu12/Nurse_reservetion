@@ -1,39 +1,41 @@
 import React from 'react'
 import './UserRegister.css'
 import { Link } from 'react-router-dom'
+import { StyledEngineProvider } from '@mui/material/styles';
+import DatePicker from './DatePicker'
 function UserRegister() {
     return (
         <div className='main_div'>
 
             <div class="login-wrap">
                 <div class="login-html">
-                    <input id="tab-1" type="radio" name="tab" class="sign-in" checked />
-                    <label for="tab-1" class="tab">
+                    <input id="tab-1" type="radio" name="tab" className="sign-in" checked />
+                    <label for="tab-1" className="tab">
                         SignIn
                     </label>
-                    <input id="tab-2" type="radio" name="tab" class="sign-up" />
-                    <label for="tab-2" class="tab">
+                    <input id="tab-2" type="radio" name="tab" className="sign-up" />
+                    <label for="tab-2" className="tab">
                         Sign Up
                     </label>
-                    <div class="login-form">
-                        <div class="sign-in-htm">
-                            <div class="group">
-                                <input id="user" type="text" class="input" placeholder="Username" />
+                    <div className="login-form">
+                        <div className="sign-in-htm">
+                            <div className="group">
+                                <input id="user" type="text" className="input" placeholder="Username" />
                             </div>
                             <div class="group">
-                                <input id="pass" type="password" class="input" data-type="password" placeholder="Password" />
+                                <input id="pass" type="password" className="input" data-type="password" placeholder="Password" />
                             </div>
                             <div class="group">
-                                <input id="check" type="checkbox" class="check" checked />
+                                <input id="check" type="checkbox" className="check" checked />
                                 <label for="check">
-                                    <span class="icon"></span>
+                                    <span className="icon"></span>
                                     Keep me Signed in
                                 </label>
                             </div>
                             <div class="group">
 
                                 <Link to='/'>
-                                    <input type="submit" class="button" value="Sign In" />
+                                    <input type="submit" className="button" value="Sign In" />
 
                                 </Link>
                             </div>
@@ -45,50 +47,52 @@ function UserRegister() {
                         <div class="sign-up-htm">
                             <div class="first-row">
                                 <div class="group">
-                                    <input id="name" type="text" class="input" placeholder="Name" />
+                                    <input id="name" type="text" className="input" placeholder="Name" />
                                 </div>
                                 <div class="group">
-                                    <input id="lname" type="text" class="input" placeholder="Last Name" />
+                                    <input id="lname" type="text" className="input" placeholder="Last Name" />
                                 </div>
                                 <div class="group">
-                                    <input id="email" type="text" class="input" placeholder="Email" />
+                                    <input id="email" type="text" className="input" placeholder="Email" />
                                 </div>
                             </div>
                             <div class="second-row">
                                 <div class="group">
-                                    <input id="birth" type="text" class="input" placeholder="Birthdate" />
+                                    <StyledEngineProvider id="birth" injectFirst>
+                                        <DatePicker className="input-date" />
+                                    </StyledEngineProvider>
                                 </div>
                                 <div class="group">
-                                    <input id="phone" type="text" class="input" placeholder="Phone Number" />
+                                    <input id="phone" type="text" className="input" placeholder="Phone Number" />
                                 </div>
                                 <div class="group">
-                                    <select name="country" class="country">
-                                        <option value="select">Select your country...</option>
-                                        <option value="Iran">Iran</option>
-                                        <option value="Netherland">Netherland</option>
-                                        <option value="United Kingdom">United Kingdom</option>
+                                    <select name="country" className="country">
+                                        <option value="select" className='inputs' >Select your country...</option>
+                                        <option value="Iran" className='inputs' >Iran</option>
+                                        <option value="Netherland" className='inputs' >Netherland</option>
+                                        <option value="United Kingdom" className='inputs' >United Kingdom</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="third-row">
-                                <div class="group">
-                                    <input id="user" type="text" class="input" placeholder="Username" />
+                            <div className="third-row">
+                                <div className="group">
+                                    <input id="user" type="text" className="input" placeholder="Username" />
                                 </div>
                                 <div class="group">
-                                    <input id="pass" type="password" class="input" data-type="password" placeholder="Password" />
+                                    <input id="pass" type="password" className="input" data-type="password" placeholder="Password" />
                                 </div>
                                 <div class="group">
-                                    <input id="pass" type="password" class="input" data-type="password"
+                                    <input id="pass" type="password" className="input" data-type="password"
                                         placeholder="Repeat Password" />
                                 </div>
                             </div>
 
                             <div class="group">
-                                <Link to='/'>  <input type="submit" class="button" value="Sign Up" /></Link>
+                                <Link to='/'>  <input type="submit" className="button" value="Sign Up" /></Link>
 
                             </div>
-                            <div class="hr"></div>
-                            <div class="foot-lnk">
+                            <div className="hr"></div>
+                            <div className="foot-lnk">
                                 <label for="tab-1">Already Member?</label>
                             </div>
                         </div>

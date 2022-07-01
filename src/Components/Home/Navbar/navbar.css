@@ -21,6 +21,10 @@ li {
   align-items: center;
   height: 10vh;
   box-shadow: rgba(50, 50, 93, 0.23) 0px 30px 30px -20px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: #fff;
 
   /*box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;*/
 }
@@ -60,6 +64,7 @@ li {
   display: none;
 }
 
+
 button {
   border: none;
   text-decoration: none;
@@ -70,6 +75,8 @@ button {
 .nurse_login1,
 .user_login1 {
   color: #fff;
+  background-color: aquamarines;
+
 }
 
 
@@ -165,4 +172,56 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+
+.dropdown {
+  width: 160px;
+  /* margin: 100px auto; */
+  /* position: relative; */
+  user-select: none;
+  border-radius: 12px;
+}
+
+.dropdown .dropdown-btn {
+  padding: 15px 20px;
+  background: #fff;
+  /* box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06); */
+  font-weight: bold;
+  color: #fff;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+
+
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  color: #333;
+  width: 110%;
+  border-radius: 10px;
+  text-align: center;
+
+
+}
+
+.dropdown .dropdown-content .dropdown-item:hover {
+  background: #f4f4f4;
+}
+
+.dropdown .dropdown-content .dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
 }

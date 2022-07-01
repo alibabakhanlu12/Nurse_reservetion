@@ -1,113 +1,121 @@
 import React from 'react'
 import './NurseRegister.css'
+
 import { Link } from 'react-router-dom'
+import { StyledEngineProvider } from '@mui/material/styles';
+import DatePicker from './DatePicker'
 function NurseResister() {
     return (
         <div className='body'>
-            <div class="login-wrap">
-                <div class="login-html">
-                    <input id="tab-1" type="radio" name="tab" class="sign-in" checked />
-                    <label for="tab-1" class="tab">
+
+            <div className="login-wrap1">
+                <div className="login-html">
+                    <input id="tab-1" type="radio" name="tab" className="sign-in" checked />
+                    <label for="tab-1" className="tab">
                         SignIn
                     </label>
-                    <input id="tab-2" type="radio" name="tab" class="sign-up" />
-                    <label for="tab-2" class="tab">
+                    <input id="tab-2" type="radio" name="tab" className="sign-up" />
+                    <label for="tab-2" className="tab">
                         Sign Up
                     </label>
-                    <div class="login-form">
-                        <div class="sign-in-htm">
-                            <div class="group">
-                                <input id="user" type="text" class="input" placeholder="Username" />
+                    <div className="login-form">
+                        <div className="sign-in-htm">
+                            <div className="group">
+                                <input id="user" type="text" className="input" placeholder="Username" />
                             </div>
                             <div class="group">
-                                <input id="pass" type="password" class="input" data-type="password" placeholder="Password" />
+                                <input id="pass" type="password" className="input" data-type="password" placeholder="Password" />
                             </div>
                             <div class="group">
-                                <input id="check" type="checkbox" class="check" checked />
+                                <input id="check" type="checkbox" className="check" checked />
                                 <label for="check">
-                                    <span class="icon"></span>
+                                    <span className="icon"></span>
                                     Keep me Signed in
                                 </label>
                             </div>
-                            <div class="group">
+                            <div className="group">
 
                                 <Link to='/'>
 
-                                    <input type="submit" class="button" value="Sign In" />
+                                    <input type="submit" className="button" value="Sign In" />
 
                                 </Link>
                             </div>
-                            <div class="hr"></div>
-                            <div class="foot-lnk">
-                                <a href="#forgot">Forgot Password?</a>
+                            <div className="hr"></div>
+                            <div className="foot-lnk">
+                                <Link to='/login/forgetpassword'>Forgot Password?</Link>
                             </div>
                         </div>
-                        <div class="sign-up-htm">
-                            <div class="first-row">
-                                <div class="group">
-                                    <input id="name" type="text" class="input" placeholder="Name" />
+                        <div className="sign-up-htm">
+                            <div className="first-row">
+                                <div className="group">
+                                    <input id="name" type="text" className="input" placeholder="Name" />
                                 </div>
                                 <div class="group">
-                                    <input id="lname" type="text" class="input" placeholder="Last Name" />
+                                    <input id="lname" type="text" className="input" placeholder="Last Name" />
                                 </div>
-                                <div class="group">
-                                    <input id="email" type="text" class="input" placeholder="Email" />
+                                <div className="group">
+                                    <input id="email" type="email" className="input" placeholder="Email" />
                                 </div>
                             </div>
-                            <div class="second-row">
-                                <div class="group">
-                                    <input id="birth" type="text" class="input" placeholder="Birthdate" />
+                            <div className="second-row">
+                                <div className="group">
+
+                                    <StyledEngineProvider id="birth" className="inputdate" injectFirst>
+                                        <DatePicker />
+                                    </StyledEngineProvider>
+
                                 </div>
-                                <div class="group">
-                                    <input id="phone" type="text" class="input" placeholder="Phone Number" />
+                                <div className="group">
+                                    <input id="phone" type="number" className="input" placeholder="Phone Number" />
                                 </div>
-                                <div class="group">
-                                    <select name="country" class="country">
-                                        <option value="select">Select your country...</option>
-                                        <option value="Iran">Iran</option>
-                                        <option value="Netherland">Netherland</option>
-                                        <option value="United Kingdom">United Kingdom</option>
+                                <div className="group">
+                                    <select name="country" className="country">
+                                        <option className='inputs' value="select">Select your country...</option>
+                                        <option className='inputs' value="Iran">Iran</option>
+                                        <option className='inputs' value="Netherland">Netherland</option>
+                                        <option className='inputs' value="United Kingdom">United Kingdom</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="third-row">
-                                <div class="group">
-                                    <input id="user" type="text" class="input" placeholder="Username" />
+                            <div className="third-row">
+                                <div className="group">
+                                    <input id="user" type="text" className="input" placeholder="Username" />
                                 </div>
-                                <div class="group">
-                                    <input id="pass" type="password" class="input" data-type="password" placeholder="Password" />
+                                <div className="group">
+                                    <input id="pass" type="password" className="input" data-type="password" placeholder="Password" />
                                 </div>
-                                <div class="group">
-                                    <input id="pass" type="password" class="input" data-type="password"
+                                <div className="group">
+                                    <input id="pass" type="password" className="input" data-type="password"
                                         placeholder="Repeat Password" />
                                 </div>
                             </div>
-                            <div class="fourth-row">
-                                <div class="group">
-                                    <select name="country" class="country">
-                                        <option value="select">Select your degree...</option>
-                                        <option value="bachelor">Bachelor</option>
-                                        <option value="Master">Master</option>
-                                        <option value="PHD">PHD</option>
+                            <div className="fourth-row">
+                                <div className="group">
+                                    <select name="country" className="country">
+                                        <option className='inputs' value="select">Select your degree...</option>
+                                        <option className='inputs' value="bachelor">Bachelor</option>
+                                        <option className='inputs' value="Master">Master</option>
+                                        <option className='inputs' value="PHD">PHD</option>
                                     </select>
                                 </div>
-                                <div class="group">
-                                    <input id="address" type="text" class="input" placeholder="Address" />
+                                <div className="group">
+                                    <input id="address" type="text" className="input" placeholder="Address" />
                                 </div>
-                                <div class="group">
-                                    <input id="skils" type="text" class="input" placeholder="Skils" />
+                                <div className="group">
+                                    <input id="skils" type="text" className="input" placeholder="Skils" />
                                 </div>
                             </div>
 
-                            <div class="group">
+                            <div className="group">
                                 <Link to='/'>
-                                    <input type="submit" class="button" value="Sign Up" />
+                                    <input type="submit" className="button" value="Sign Up" />
 
 
                                 </Link>
 
-                                <div class="hr"></div>
-                                <div class="foot-lnk">
+                                <div className="hr"></div>
+                                <div className="foot-lnk">
                                     <label for="tab-1">Already Member?</label>
                                 </div> </div>
 

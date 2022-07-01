@@ -1,99 +1,51 @@
-import React from 'react'
-import './Contactus.css'
-import { FaGithub, FaTwitter, FaTelegram } from 'react-icons/fa'
+import React from 'react';
+import './Contactus.css';
+import { Grid, TextField, Button, Card, CardContent, Typography } from '@material-ui/core';
 
-function Contactus() {
 
-    const submit = (e) => {
-        e.preventDefault();
-        e.target.elements.name.value = '';
-        e.target.elements.email.value = '';
-        e.target.elements.message.value = '';
-    }
+function App() {
+
+
     return (
-        <div>
-            <section id="contact">
+        <div className="App">
+            <Typography gutterBottom variant="h3" align="center">
+                Contact With Us
+            </Typography>
+            <Grid>
+                <Card className='form11' style={{ maxWidth: 700, maxHeight: 1000, padding: "20px 5px" }}>
+                    <CardContent>
 
-                <h1 class="section-header">We'd love to here from you</h1>
+                        <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
+                            Fill up the form and our team will get back to you within 24 hours.
+                        </Typography>
+                        <form >
+                            <Grid container spacing={1}>
+                                <Grid xs={12} sm={6} item>
+                                    <TextField placeholder="Enter first name" label="First Name" fullWidth required />
+                                </Grid>
+                                <Grid xs={12} sm={6} item>
+                                    <TextField placeholder="Enter last name" label="Last Name" fullWidth required />
+                                </Grid>
+                                <Grid xs={12} sm={6} item>
+                                    <TextField type="email" placeholder="Enter email" label="Email" fullWidth required />
+                                </Grid>
+                                <Grid xs={12} sm={6} item>
+                                    <TextField type="number" placeholder="Enter phone number" label="Phone" fullWidth required />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField label="Message" multiline rows={6} placeholder="Type your message here" fullWidth required />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
+                                </Grid>
 
-                <div class="contact-wrapper">
-
-
-
-                    <form id="contact-form" onSubmit={submit} class="form-horizontal" role="form">
-
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" id="name" placeholder="Name" name="name" value=""
-                                    required />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <input type="email" class="form-control" id="email" placeholder="Email" name="email" value=""
-                                    required />
-                            </div>
-                        </div>
-
-                        <textarea class="form-control" rows="10" placeholder="Your Message" name="message" required></textarea>
-
-                        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-                            <div class="alt-send-button">
-                                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-                            </div>
-
-                        </button>
-
-                    </form>
-
-
-
-                    <div class="direct-contact-container">
-
-                        <ul class="contact-list">
-                            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Iran,
-                                Tabriz</span></i></li>
-
-                            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
-                                href="tel:98-914-395-7795" title="Give me a call">+989143957795</a></span></i></li>
-
-                            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
-                                href="mailto:#" title="Send me an email">nurse.reservation.team@gmail.com</a></span></i></li>
-
-                        </ul>
-
-                        <hr />
-                        <ul class="social-media-list">
-                            <a href="https://github.com/alibabakhanlu12/Nurse_reservetion" target="_blank"  >
-                                <li>
-                                    <FaGithub className='icons' />
-                                </li>
-                            </a>
-
-                            <a href="https://twitter.com/" target="_blank"  >
-
-                                <li>
-                                    <FaTwitter className='icons' />
-                                </li>
-                            </a>
-
-                            <a href="https://web.telegram.org/" target="_blank" class="contact-icon">
-                                <li>
-                                    <FaTelegram className='icons' />
-                                </li>
-                            </a>
-                        </ul>
-                        <hr />
-
-                        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
-
-                    </div>
-
-                </div>
-
-            </section></div>
-    )
+                            </Grid>
+                        </form>
+                    </CardContent>
+                </Card>
+            </Grid>
+        </div>
+    );
 }
 
-export default Contactus
+export default App;

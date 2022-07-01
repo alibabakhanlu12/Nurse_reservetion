@@ -6,6 +6,7 @@ import { ImCross } from "react-icons/im"
 import { FaHospitalAlt } from "react-icons/fa";
 import { IoLogOutSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
+import Dropdown from './Drobdown'
 const Navbar = () => {
   const [Mobile, setMobile] = useState(false)
   return (
@@ -29,16 +30,19 @@ const Navbar = () => {
             <li>ContactUs</li>
           </Link>
 
-          <Link to='/nurse_login' className='nurse_login'>
+          {/* <Link to='/nurse_login' className='nurse_login'>
             <li className='nurse_login1' >  <span >Login</span>  <span className="rule">(as Nurse) </span></li>
           </Link>
           {<Link to='/user_login' className='user_login'>
             <li className='user_login1' > <span>Login</span> <span className="rule">(as User) </span></li>
-          </Link>}
+          </Link>} */}
+          <Dropdown />
           <Link to='/user_login' className='logout'>
 
             <li className='logout' ><IoLogOutSharp className="icons" /> </li>
           </Link>
+
+
 
           <Link to='/profile' className='profile'>
 

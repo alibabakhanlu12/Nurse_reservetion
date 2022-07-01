@@ -5,6 +5,7 @@ import { BsInstagram, BsLinkedin, BsFillTelephoneFill } from 'react-icons/bs'
 import { AiFillHeart } from 'react-icons/ai'
 import { MdEmail } from 'react-icons/md'
 import { FaFax, FaMapMarkerAlt, FaFacebook } from 'react-icons/fa'
+import { Link } from "react-router-dom"
 import './Footer.css'
 
 function Footer() {
@@ -13,7 +14,15 @@ function Footer() {
 
             <div className='socialmedias'>
                 <h3 className='footer_title'>Get connected with us on social networks:</h3>
-                <div className='icons'> <FaFacebook /><BsInstagram />  <FaTwitterSquare /> <AiFillGithub /> <BsLinkedin />          </div>
+                <div className='icons'>
+                    <a href='/www.facebook.com' target><FaFacebook /> </a>
+                    <a href='/www.Instagram.com'>  <BsInstagram /></a>
+                    <a href='/www.Twiiter.com'>   <FaTwitterSquare /></a>
+                    <a href='/www.Github.com'><AiFillGithub /> </a>
+                    <a href='www.linkedin.com'><BsLinkedin /> </a>
+
+
+                </div>
 
             </div>
 
@@ -23,19 +32,19 @@ function Footer() {
 
                     <ul>
                         <h3>Servises</h3>
-                        <li>Old care</li>
-                        <li>Child care</li>
-                        <li>Online Reservation</li>
-                        <li>Injections section</li>
+                        <li><Link to='/servises'> Old care</Link> </li>
+                        <li> <Link to="/servises"> Child care</Link> </li>
+                        <li><Link to='/servises'>Online Reservation</Link> </li>
+                        <li> <Link to='/servises'> Injections section</Link>  </li>
                     </ul>
                 </div>
                 <div className='usefull_links'>
                     <ul>
                         <h3> Usefull Links</h3>
-                        <li>Setting </li>
-                        <li>Help </li>
-                        <li>Orders </li>
-                        <li>Other </li>
+                        <li><Link to='/setting'> Setting</Link> </li>
+                        <li>  <Link to='/help'>  Help</Link> </li>
+                        <li><Link to='/orders'>Orders </Link></li>
+                        <li> <Link to='other_links'>Other Links</Link> </li>
                     </ul>
 
                 </div>
@@ -44,10 +53,10 @@ function Footer() {
                 <div className='contact'>
                     <ul >
                         <h4>Contact with Us</h4>
-                        <li><BsFillTelephoneFill /> <span></span> Phone Number:+98914121243</li>
-                        <li><FaMapMarkerAlt /><span></span>Addres:Univercity </li>
-                        <li><MdEmail /><span></span> Email:Hospital@info.com</li>
-                        <li><FaFax /><span></span>Fax:+13434345</li>
+                        <li><BsFillTelephoneFill />  Phone Number:+98914121243</li>
+                        <li><FaMapMarkerAlt /> Addres:Univercity </li>
+                        <li><MdEmail />  Email:Hospital@info.com</li>
+                        <li><FaFax /> Fax:+13434345</li>
                     </ul>
 
                 </div>

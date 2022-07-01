@@ -27,7 +27,7 @@ a {
     text-decoration: none
 }
 
-.login-wrap {
+.login-wrap1 {
     width: 100%;
     margin: auto;
     max-width: 1300px;
@@ -56,11 +56,14 @@ a {
     transform: rotateY(180deg);
     backface-visibility: hidden;
     transition: all .4s linear;
+    margin-bottom: 140px;
 }
 
 .login-html .sign-in,
 .login-html .sign-up,
 .login-form .group .check {
+    margin-bottom: 140px;
+
     display: none;
 }
 
@@ -126,7 +129,7 @@ a {
 }
 
 .login-form .group input[data-type="password"] {
-    text-security: circle;
+    input-security: circle;
     -webkit-text-security: circle;
 }
 
@@ -203,9 +206,11 @@ a {
 
 .foot-lnk {
     text-align: center;
+    margin-top: -40px;
 }
 
 .first-row {
+    margin-top: -50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -227,10 +232,12 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: -30px;
 }
 
 .group {
     margin: 40px;
+    margin-bottom: 20px
 }
 
 
@@ -248,4 +255,13 @@ a {
     flex-direction: column;
     margin-top: 25%;
 
+}
+
+.inputs {
+    background-color: #fff;
+    color: black;
+}
+
+.inputdate {
+    width: 300px;
 }
