@@ -9,12 +9,15 @@ function NurseProfile() {
     const { last_name } = useParams()
 
 
-    // useEffect(() => {
-    //     const findNurse = () => {
-    //         const newNurse = FakeData.find(Nurse.last_name === last_name)
-    //         setSingleNurse()
-    //     }
-    // })
+    useEffect(() => {
+        const findNurse = () => {
+            const newNurse = FakeData.find((Nurse) => (Nurse.last_name === last_name))
+            setSingleNurse(newNurse)
+            console.log(newNurse)
+        }
+
+        findNurse()
+    }, [last_name])
 
     return (
         <div>
@@ -22,17 +25,17 @@ function NurseProfile() {
             <div className='main-profile'>
 
                 <div className='main-photo'>
-                    <img src={Nurse1} className='profile-images' />
+                    <img src={singleNurse.img} className='profile-images' />
                 </div>
 
                 <div className='profile-description'>
 
                     <h3 className='profile-name'>Name :{last_name}</h3>
-                    <h3 className='profile-email'>Email :{FakeData.email} </h3>
-                    <h3 className='profile-phone'>phone : </h3>
-                    <h3 className='profile-skill'>Skill: </h3>
-                    <h3 className='profile-education'>Education: </h3>
-                    <h3 className='profile-address'>Address: </h3>
+                    <h3 className='profile-email'>Email :{singleNurse.email} </h3>
+                    <h3 className='profile-phone'>phone :{singleNurse.phone} </h3>
+                    <h3 className='profile-skill'>Skill:{singleNurse.skill} </h3>
+                    <h3 className='profile-education'>Education:{singleNurse.education} </h3>
+                    <h3 className='profile-address'>Address:{singleNurse.address} </h3>
                     <h3 className='profile-datereserve'>Range Of Reserve: <DatePicker className='date-range-picker' /></h3>
                     <button className='profile-btn'> Reserve this Nurse Now</button>
 
