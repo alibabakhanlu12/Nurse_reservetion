@@ -12,69 +12,57 @@ import FetchNurses from "./Components/Nurse2/FetchNurses"
 import NurseProfile from "./Components/Nurse2/NurseProfile"
 function App() {
   return (
-    <>
-      <Router>
+
+    <Router>
 
 
-        <Switch>
-          <Route path='/' compoent={Home} exact>
-            <Navbar />
-            <Home />
-          </Route>
-
-
-          <Route path='/nurses' compoent={FetchNurses} exact>
-            <Navbar />
-            <FetchNurses />
-            <Footer />
-          </Route>
-
-          <Route path='/:last_name' compoent={NurseProfile} exact>
-            <Navbar />
-            <NurseProfile />
-            <Footer />
-          </Route>
-
-          <Route path='/servises' compoent={Servises} exact>
-            <Navbar />
-            <Servises />
-            <Footer />
-          </Route>
-
-          <Route path='/contact-us' compoent={Contact} exact>
-            <Navbar />
-            <Contact />
-            <Footer />
-          </Route>
-
-
-          <Route path='/nurse_login' compoent={NurseRegister} exact>
-            <NurseRegister />
-            <Footer />
-          </Route>
-
-          <Route path='/user_login' compoent={UserRegister} exact>
-            <UserRegister />
-          </Route>
+      <Switch>
+        <Route path='/' Components={Home} exact>
+          <Navbar />
+          <Home />
+        </Route>
 
 
 
-          {
-            FakeData.map((item) => (
-              <Route key={item.id} path={`/nurses/profile/${item.last_name}`} compoent={NurseProfile}  >
-                <UserRegister />
-              </Route>
-            )
-            )}
+        <Route path='/servises' Components={Servises}  >
+          <Navbar />
+          <Servises />
+          <Footer />
+        </Route>
+        <Route path='/nurses' Components={FetchNurses} exact >
+          <Navbar />
+          <FetchNurses />
+          <Footer />
+        </Route>
+
+        <Route path='/contact-us' Components={Contact}  >
+          <Navbar />
+          <Contact />
+          <Footer />
+        </Route>
+
+
+        <Route path='/nurse_login' Components={NurseRegister}  >
+          <NurseRegister />
+        </Route>
+
+        <Route path='/user_login' Components={UserRegister}  >
+          <UserRegister />
+        </Route>
+
+
+        <Route path='/:last_name' Components={NurseProfile}  >
+          <Navbar />
+          <NurseProfile />
+          <Footer />
+        </Route>
 
 
 
+      </Switch>
 
+    </Router>
 
-        </Switch>
-
-      </Router>
-    </>
   )
 }
 

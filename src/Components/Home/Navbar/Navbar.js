@@ -30,12 +30,7 @@ const Navbar = () => {
             <li>ContactUs</li>
           </Link>
 
-          {/* <Link to='/nurse_login' className='nurse_login'>
-            <li className='nurse_login1' >  <span >Login</span>  <span className="rule">(as Nurse) </span></li>
-          </Link>
-          {<Link to='/user_login' className='user_login'>
-            <li className='user_login1' > <span>Login</span> <span className="rule">(as User) </span></li>
-          </Link>} */}
+
           <Dropdown />
           <Link to='/user_login' className='logout'>
 

@@ -7,7 +7,6 @@ import './Servises.css'
 
 const allCategories = ['All', ...new Set(items.map(item => item.skills))];
 
-console.log(allCategories);
 
 function Servises() {
     const [menuItem, setMenuItem] = useState(items);

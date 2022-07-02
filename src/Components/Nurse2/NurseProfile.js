@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import Nurse1 from '../../assets/nurse1.jpg'
 import './NurseProfile.css'
 import DatePicker from './DateRangePicker'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import FakeData from '../Nurses/FakeData'
 function NurseProfile() {
     const [singleNurse, setSingleNurse] = useState([])
@@ -13,7 +12,6 @@ function NurseProfile() {
         const findNurse = () => {
             const newNurse = FakeData.find((Nurse) => (Nurse.last_name === last_name))
             setSingleNurse(newNurse)
-            console.log(newNurse)
         }
 
         findNurse()
@@ -25,7 +23,7 @@ function NurseProfile() {
             <div className='main-profile'>
 
                 <div className='main-photo'>
-                    <img src={singleNurse.img} className='profile-images' />
+                    <img src={singleNurse.image} className='profile-images' />
                 </div>
 
                 <div className='profile-description'>

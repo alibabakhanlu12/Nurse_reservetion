@@ -44,14 +44,14 @@ function FetchNurses() {
             </div>
             <div className='card_main_div'>
                 {FakeData.filter((val1) => {
-                    if (val1 == 2)
+                    if (val1 === 2)
                         return val1;
-                    else if (val1.rate == value) {
+                    else if (val1.rate === value) {
                         return val1;
                     }
-                }).map((id, img, last_name, skill, rate) => (
+                }).map(({ id, image, last_name, skill, rate }) => (
                     <div key={id} className='card11'>
-                        <img src={img} className='card-nurse-img' />
+                        <img src={image} className='card-nurse-img' />
                         <h4 className='name'>name:{last_name}</h4>
                         <h4> skill:{skill}</h4>
                         <h4>rate: {rate}</h4>
@@ -65,13 +65,13 @@ function FetchNurses() {
                     else if (val.last_name.toLowerCase().includes(item.toLowerCase())) {
                         return val;
                     }
-                }).map((item) => (
-                    <div key={item.id} className='card11'>
-                        <img src={item.img} className='card-nurse-img' alt={item.first_name} />
-                        <h4 className='name'>name:{item.last_name}</h4>
-                        <h4> skill:{item.skill}</h4>
-                        <h4>rate: {item.rate}</h4>
-                        <Link to={`/${item.last_name}`}><button className='card_button11'>Reserve Now</button></Link>
+                }).map(({ id, image, last_name, skill, rate }) => (
+                    <div key={id} className='card11'>
+                        <img src={image} className='card-nurse-img' alt={last_name} />
+                        <h4 className='name'>name:{last_name}</h4>
+                        <h4> skill:{skill}</h4>
+                        <h4>rate: {rate}</h4>
+                        <Link to={`/${last_name}`}><button className='card_button11'>Reserve Now</button></Link>
                     </div>
 
                 ))}

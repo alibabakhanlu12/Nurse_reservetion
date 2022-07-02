@@ -42,20 +42,21 @@ function HomeSlider() {
     ];
 
     return (
-        <div>             <Slider autoplay={4000}>
-            {content.map((item, index) => (
-                <div
-                    key={index}
-                    style={{ background: `url('${item.image}') no-repeat center center` }}
-                >
-                    <div className='center'  >
-                        <h1 className='title1'>{item.title}</h1>
-                        <p className='description'>{item.description}</p>
-                        <button className='btn11'> <Link to={item.button.link}>{item.button.name}</Link></button>
+        <div>
+            <Slider autoplay={4000}>
+                {content.map((item) => (
+                    <div
+                        key={item.index}
+                        style={{ background: `url('${item.image}') no-repeat center center` }}
+                    >
+                        <div className='center'  >
+                            <h1 className='title1'>{item.title}</h1>
+                            <p className='description'>{item.description}</p>
+                            <button className='btn11'> <Link to={item.button.link}>{item.button.name}</Link></button>
+                        </div>
                     </div>
-                </div>
-            ))}
-        </Slider>
+                ))}
+            </Slider>
         </div>
     )
 }
