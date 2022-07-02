@@ -5,11 +5,11 @@
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
-*,
+/* *,
 :after,
 :before {
     box-sizing: border-box
-}
+} */
 
 .clearfix:after,
 .clearfix:before {
@@ -264,4 +264,14 @@ a {
 
 .inputdate {
     width: 300px;
+}
+
+.back_btn {
+    background-color: white;
+    width: 200px;
+    height: 40px;
+    margin-top: 0;
+    position: relative;
+    top: -16%;
+    left: -6%;
 }

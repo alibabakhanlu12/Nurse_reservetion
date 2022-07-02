@@ -3,13 +3,16 @@ import './NurseRegister.css'
 
 import { Link } from 'react-router-dom'
 import { StyledEngineProvider } from '@mui/material/styles';
+import { IoMdArrowRoundBack } from 'react-icons/io'
 import DatePicker from './DatePicker'
 function NurseResister() {
     return (
         <div className='body'>
-
             <div className="login-wrap1">
+
                 <div className="login-html">
+                    <Link to='/'> <button className='back_btn'><IoMdArrowRoundBack />Back to Home</button></Link>
+
                     <input id="tab-1" type="radio" name="tab" className="sign-in" checked />
                     <label for="tab-1" className="tab">
                         SignIn

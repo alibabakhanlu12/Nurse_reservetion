@@ -1,8 +1,11 @@
 import React from 'react'
-
+import Card from './Card';
 function Nurses() {
     return (
-        <div>Nurses</div>
+        <div>
+
+            <Card />
+        </div>
     )
 }
 
