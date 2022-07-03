@@ -1,11 +1,13 @@
 import React from 'react';
 import './Contactus.css';
-
+import { Helmet } from 'react-helmet'
 function App() {
 
     return (
 
         <div>
+
+            <Helmet> <title> Contact Us</title></Helmet>
             <div className="contact3 py-3">
                 <div className="row no-gutters">
                     <div className="container">
@@ -17,7 +19,7 @@ function App() {
                             </div>
                             <div className="col-lg-5">
                                 <div className="contact-box ml-3">
-                                    <h1 className="font-weight-light mt-3">Contact with us</h1>
+                                    <h1 className="font-weight-light mt-5" id='title-contactus'>Contact with us</h1>
                                     <form className="mt-4">
                                         <div className="row">
                                             <div className="col-lg-12">

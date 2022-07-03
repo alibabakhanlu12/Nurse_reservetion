@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import FakeData from '../Nurses/FakeData';
+import NurseData from '../../NursesData';
 import { Link } from 'react-router-dom'
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 import './Nurses.css'
+import { Helmet } from 'react-helmet'
+
 function FetchNurses() {
 
-    const [items, setItems] = useState(FakeData)
+    const [items, setItems] = useState(NurseData)
     const [item, setItem] = useState("");
     const [value, setValue] = useState();
 
@@ -14,6 +16,9 @@ function FetchNurses() {
 
 
         <div>
+            <Helmet>
+                <title> Nurses</title>
+            </Helmet>
             <div className='nurse_class_title'>
                 <h1 >Nurses List</h1>
                 <p>here you can see all of nurses and search with name and rate also you can go profile who you want</p>
@@ -43,35 +48,38 @@ function FetchNurses() {
 
             </div>
             <div className='card_main_div'>
-                {FakeData.filter((val1) => {
+                {NurseData.filter((val1) => {
                     if (val1 === 2)
                         return val1;
                     else if (val1.rate === value) {
                         return val1;
                     }
-                }).map(({ id, image, last_name, skill, rate }) => (
+                }).map(({ id, image, username, skills, phoneNumber, rate, firstName, lastName, education, birthDate, address, country }) => (
                     <div key={id} className='card11'>
                         <img src={image} className='card-nurse-img' />
-                        <h4 className='name'>name:{last_name}</h4>
-                        <h4> skill:{skill}</h4>
+                        <h4 className='name'>Fullname:{firstName} {lastName}</h4>
+                        <h4> skill:{skills}</h4>
+
                         <h4>rate: {rate}</h4>
-                        <Link to={`/nurses/${last_name}`}><button className='card_button11'>Reserve Now</button></Link>
+                        <Link to={`/${username}`}><button className='card_button11'>Reserve Now</button></Link>
                     </div>
 
                 ))}
-                {FakeData.filter((val) => {
+
+
+                {NurseData.filter((val) => {
                     if (val === "")
                         return val;
-                    else if (val.last_name.toLowerCase().includes(item.toLowerCase())) {
+                    else if (val.username.toLowerCase().includes(item.toLowerCase())) {
                         return val;
                     }
-                }).map(({ id, image, last_name, skill, rate }) => (
+                }).map(({ id, image, username, skills, rate, phoneNumber, firstName, lastName, education, birthDate, address, country }) => (
                     <div key={id} className='card11'>
-                        <img src={image} className='card-nurse-img' alt={last_name} />
-                        <h4 className='name'>name:{last_name}</h4>
-                        <h4> skill:{skill}</h4>
+                        <img src={image} className='card-nurse-img' />
+                        <h4 className='name'> Name:{firstName} {lastName}</h4>
+                        <h4> skill:{skills}</h4>
                         <h4>rate: {rate}</h4>
-                        <Link to={`/${last_name}`}><button className='card_button11'>Reserve Now</button></Link>
+                        <Link to={`/${username}`}><button className='card_button11'>Reserve Now</button></Link>
                     </div>
 
                 ))}

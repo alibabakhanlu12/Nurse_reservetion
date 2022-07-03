@@ -4,13 +4,13 @@ function Menu({ menuItem }) {
     return (
         <div className="item">
             {
-                menuItem.map((item, index) => {
-                    return <div className="item-con" key={index}>
+                menuItem.map((item) => {
+                    return <div className="item-con" key={item.id}>
                         <div className="item-container">
 
-                            <img src={item.image} alt="" />
-                            <h4 className='h2'> name: {item.name}</h4>
-                            <h6 >category:{item.skills}</h6>
+                            <img src={item.image} className='servises-image' alt="" />
+                            <h4 className='h2'> name: {item.lastName}</h4>
+                            <h6 >category:{item.skill}</h6>
                         </div>
                     </div>
                 })

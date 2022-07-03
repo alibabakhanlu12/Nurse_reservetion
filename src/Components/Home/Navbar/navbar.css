@@ -30,8 +30,10 @@ li {
 }
 
 .logo {
-  font-size: 26px;
-  margin-top: -25px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .nav-links {

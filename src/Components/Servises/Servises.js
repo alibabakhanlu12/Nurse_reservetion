@@ -1,28 +1,38 @@
 import { useState } from 'react';
-import items from './allData';
+import NurseData from '../../NursesData'
 import Menu from './Menu';
 import Button from './Button';
 import './Servises.css'
+import { Helmet } from "react-helmet";
 
 
-const allCategories = ['All', ...new Set(items.map(item => item.skills))];
+const allCategories = ['All', ...new Set(NurseData.map(item => item.skills))];
 
 
 function Servises() {
-    const [menuItem, setMenuItem] = useState(items);
+    <Helmet>
+
+        <title>Servises</title>
+
+    </Helmet>
+    const [menuItem, setMenuItem] = useState(NurseData);
     const [buttons, setButtons] = useState(allCategories);
 
     const filter = (button) => {
 
         if (button === 'All') {
-            setMenuItem(items);
+            setMenuItem(NurseData);
             return;
         }
 
-        const filteredData = items.filter(item => item.skills === button);
+        const filteredData = NurseData.filter(item => item.skills === button);
         setMenuItem(filteredData)
     }
+    <Helmet>
 
+        <title>Servises</title>
+
+    </Helmet>
 
     return (
         <div className="App1">

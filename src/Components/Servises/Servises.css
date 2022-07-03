@@ -48,12 +48,18 @@
      color: rgba(255, 255, 255, 0.596);
  }
 
+
+
  .item {
      display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-gap: 4rem;
-     padding-bottom: 4em;
-     border-radius: 12px;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 3rem;
+     margin-left: -70px;
+ }
+
+ .servises-image {
+     width: 480px;
+     height: 300px;
  }
 
  .item-container {
@@ -62,7 +68,8 @@
 
  .item-con {
      width: 110%;
-     padding: 1.6rem 1.6rem;
+     height: 90%;
+     padding: 2.6rem 1.6rem;
      background-color: #19202E;
 
  }

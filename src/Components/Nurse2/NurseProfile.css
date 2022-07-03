@@ -18,14 +18,14 @@
 
 .profile-images {
     width: 570px;
-    height: 570px;
+    height: 590px;
+    margin-left: 30px;
 
 }
 
 .main-photo {}
 
 .profile-description {
-
     margin-left: 50px;
     display: flex;
     align-items: space-between;
@@ -34,19 +34,58 @@
     gap: 30px;
 }
 
-.profile-name {}
+.profile-name {
+    font-size: 20px;
+}
 
-.profile-email {}
+.profile-email {
+    font-size: 20px;
 
-.profile-phone {}
 
-.profile-skill {}
+}
 
-.profile-education {}
+.profile-phone {
+    font-size: 20px;
 
-.profile-address {}
+}
 
-.profile-datereserve {}
+.profile-skill {
+
+    font-size: 20px;
+
+}
+
+
+.profile-brithdate {
+    font-size: 20px;
+
+}
+
+.profile-address {
+    font-size: 20px;
+
+}
+
+.profile-country {
+    font-size: 20px;
+
+}
+
+.profile-address {
+    font-size: 20px;
+
+}
+
+.profile-education {
+    font-size: 20px;
+
+}
+
+
+.profile-datereserve {
+    font-size: 20px;
+
+}
 
 .profile-btn {
     background-color: red;

@@ -34,14 +34,14 @@ const Navbar = () => {
           <Dropdown />
           <Link to='/user_login' className='logout'>
 
-            <li className='logout' ><IoLogOutSharp className="icons" /> </li>
+            <li className='logout' ><IoLogOutSharp className="icons11" /> </li>
           </Link>
 
 
 
           <Link to='/profile' className='profile'>
 
-            <li className='profile' ><CgProfile className="icons" /> </li>
+            <li className='profile' ><CgProfile className="icons11" /> </li>
           </Link>
         </ul>
 

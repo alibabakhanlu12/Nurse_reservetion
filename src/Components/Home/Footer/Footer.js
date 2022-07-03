@@ -12,9 +12,9 @@ function Footer() {
     return (
         <footer className='footer'>
 
-            <div className='socialmedias'>
-                <h3 className='footer_title'>Get connected with us on social networks:</h3>
-                <div className='icons'>
+            <div className='socialmedias11'>
+                <h3 className='footer_title11'>Get connected with us on social networks:</h3>
+                <div className='icons11'>
                     <a href='/www.facebook.com' target><FaFacebook /> </a>
                     <a href='/www.Instagram.com'>  <BsInstagram /></a>
                     <a href='/www.Twiiter.com'>   <FaTwitterSquare /></a>
@@ -31,7 +31,7 @@ function Footer() {
                 <div className='Servises'>
 
                     <ul>
-                        <h3>Servises</h3>
+                        <h3 className='tilte-fotter'>Servises</h3>
                         <li><Link to='/servises'> Old care</Link> </li>
                         <li> <Link to="/servises"> Child care</Link> </li>
                         <li><Link to='/servises'>Online Reservation</Link> </li>
@@ -40,7 +40,7 @@ function Footer() {
                 </div>
                 <div className='usefull_links'>
                     <ul>
-                        <h3> Usefull Links</h3>
+                        <h3 className='tilte-fotter'> Usefull Links</h3>
                         <li><Link to='/setting'> Setting</Link> </li>
                         <li>  <Link to='/help'>  Help</Link> </li>
                         <li><Link to='/orders'>Orders </Link></li>
@@ -50,13 +50,13 @@ function Footer() {
                 </div>
 
 
-                <div className='contact'>
+                <div  >
                     <ul >
-                        <h4>Contact with Us</h4>
-                        <li><BsFillTelephoneFill />  Phone Number:+98914121243</li>
-                        <li><FaMapMarkerAlt /> Addres:University of Tabriz </li>
-                        <li><MdEmail />  Email:info@hospital.com</li>
-                        <li><FaFax /> Fax:041 1431 8851</li>
+                        <h4 className='tilte-fotter'>Contact with Us</h4>
+                        <li className='contact11' ><BsFillTelephoneFill />  Phone Number:+98914121243</li>
+                        <li className='contact11'  ><FaMapMarkerAlt /> Addres:University of Tabriz </li>
+                        <li className='contact11' ><MdEmail />  Email:info@hospital.com</li>
+                        <li className='contact11'   ><FaFax /> Fax:041 1431 8851</li>
                     </ul>
 
                 </div>

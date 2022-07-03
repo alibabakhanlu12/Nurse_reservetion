@@ -4,12 +4,15 @@ import HomeCarousel from './HomeCarousel';
 import HomeSlider from './HomeSlider'
 import Footer from '../Footer/Footer'
 import ServiseInfo from './Inofrmations/HomeServiseInfo'
+import { Helmet } from 'react-helmet'
 function Home() {
 
 
     return (
         <div>
-
+            <Helmet>
+                <title> Home</title>
+            </Helmet>
             <HomeSlider />
             <h2 className='title_ourservises'> Health Services for you</h2>
             <p className='p-ourservises'> we are always here to listening and Understanding</p>

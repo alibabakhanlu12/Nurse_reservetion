@@ -2,7 +2,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Home.css'
-import info from './Inofrmations/HomeCarouselnfo'
+import NurseData from './Inofrmations/HomeCarouselnfo'
 function HomeCarousel() {
     const responsive = {
         superLargeDesktop: {
@@ -26,17 +26,17 @@ function HomeCarousel() {
     return (
         <div>
 
-            <h1 className='title_topnurses'>Top Nurses</h1>
+            <h1 className='title_topnurses1'>Top Nurses</h1>
             <h3 className='des_nurses'>In this section, you can see the top nurses in our collection </h3>
             <div className='top_nurses'></div>
             <Carousel responsive={responsive}>
                 {
-                    info.map((item) => (
-                        <div key={item.index} className="nurse1"><img src={item.image} alt='nurse' className="nurse_1" />
-                            <h5 className='nurse_name'>Name: {item.name}</h5>
-                            <h5 className='nurse_skill'> Skill: {item.Skill} </h5>
+                    NurseData.map((item) => (
+                        <div key={item.id} className="nurse1"><img src={item.image} alt='nurse' className="nurse_1" />
+                            <h5 className='nurse_name'>Name: {item.firstName} {item.lastName}</h5>
+                            <h5 className='nurse_skill'> Skill: {item.skills} </h5>
                             <h5 className='nurse_skill'> education: {item.education} </h5>
-                            <h5 className='nurse_rate'>Satisfaction : {item.satisfaction}</h5>
+                            <h5 className='nurse_rate'>Satisfaction : {item.rate}</h5>
                         </div>
 
                     ))}

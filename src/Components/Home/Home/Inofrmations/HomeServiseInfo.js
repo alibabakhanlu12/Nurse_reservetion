@@ -1,7 +1,7 @@
 import ChildHelp from '../../../../assets/care-icon-25.jpg';
 import OldManHelp from '../../../../assets/2512403.png';
 import Reserve from '../../../../assets/reserve.png';
-
+import '../Home.css'
 const ServiseInfo = [
     {
         icon: Reserve,
@@ -29,7 +29,7 @@ const ServiseInfo = [
     {
         icon: ChildHelp,
         servise: 'servise3',
-        icon_class: 'i-s1',
+        icon_class: 'i-s3',
         title: 'Child care',
         title_class: 'title_s3',
         describtion: 'If caring for your baby is difficult for you,do not worry at all. We have professional nurses in our collection to take care of the baby,  so leave it to us.',
