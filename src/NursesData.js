@@ -19,6 +19,7 @@ import nurse18 from './nurse_img/18.png'
 import nurse19 from './nurse_img/19.jpeg'
 import nurse20 from './nurse_img/20.png'
 
+
 const NursesData =
     [{ id: 1, firstName: "Majid", lastName: "Hosseinzadeh", birthDate: "2003-03-19", email: "majidhzdh@gmail.com", phoneNumber: "09143957795", address: "Urmia-Shahed", username: "majidhzdh", password: "majid2003", education: "bachelor", country: "Iran", skills: "bandage", image: nurse1, rate: "1" },
     { id: 2, firstName: "Janis", lastName: "Joplin", birthDate: "1998-07-30", email: "Janis.Joplin@gmail.com", phoneNumber: "448299120442", address: "UK-St170", username: "JanisJP", password: "janis1998", education: "master", country: "United Kingdom", skills: "baby", image: nurse2, rate: "2" },
