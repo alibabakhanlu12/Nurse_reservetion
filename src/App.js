@@ -12,8 +12,10 @@ import NurseSignup from './Components/Registration/NurseRegister/pages/Signup'
 import UserSignup from './Components/Registration/UserRegister/pages/Signup'
 import NurseLogin from "./Components/Registration/NurseRegister/pages/Login"
 import UserLogin from "./Components/Registration/UserRegister/pages/Login"
+import AdminLogin from './Components/Registration/AdminRegister/pages/Login'
+import Admin from './Components/Admin/Admin'
 import Helppage from './HelpPage'
-// import UserProfile from './UserProfile/UserProfile'
+import UserProfile from './UserProfile/UserProfile'
 
 function App() {
   return (
@@ -53,16 +55,18 @@ function App() {
           <Footer />
         </Route>
 
-        {/*         
-      change Components to admin class Components */}
-        <Route path='/admin' Components={Contact} exact >
+
+        <Route path='/admin' Components={Admin} exact >
           <Navbar />
 
-          {/* change this */}
-          <Contact />
+          <Admin />
           <Footer />
         </Route>
-
+        <Route path='/profile-user' Components={UserProfile} exact >
+          <Navbar />
+          <UserProfile />
+          <Footer />
+        </Route>
 
 
         <div className="min-h-full h-screen flex items-center mt-11 justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -76,6 +80,8 @@ function App() {
 
             <Route path='/nursesignup' Components={NurseSignup}  >  <NurseSignup /> </Route>
 
+            <Route path='/adminlogin' Components={AdminLogin}  >  <AdminLogin /> </Route>
+
 
           </div></div>
 
@@ -88,6 +94,7 @@ function App() {
           <Helppage />
           <Footer />
         </Route>
+
 
 
         <Route path='/settings' Components={Setting} exact><Setting /> </Route>

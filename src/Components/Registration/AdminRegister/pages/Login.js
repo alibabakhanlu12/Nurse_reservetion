@@ -5,13 +5,11 @@ export default function LoginPage() {
     return (
         <>
             <Helmet>
-                <title> NurseLogin</title>
+                <title> Admin Login</title>
             </Helmet>
             <Header
-                heading="Login to your Nurse account"
-                paragraph="Don't have an account yet? "
-                linkName="Signup"
-                linkUrl='/nursesignup'
+                heading="Login As Admin"
+
             />
             <Login />
         </>

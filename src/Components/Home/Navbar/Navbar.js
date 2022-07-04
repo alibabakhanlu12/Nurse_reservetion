@@ -39,7 +39,7 @@ const Navbar = () => {
 
 
 
-          <Link to='/profile' className='profile'>
+          <Link to='/profile-user' className='profile'>
 
             <li className='profile' ><CgProfile className="icons11" /> </li>
           </Link>

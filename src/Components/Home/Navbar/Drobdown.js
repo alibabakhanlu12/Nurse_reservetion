@@ -32,7 +32,7 @@ function Dropdown() {
                 </div>
                 <div className="dropdown-item">
 
-                    <Link to='/admin-login'>    Login as Admin</Link>
+                    <Link to='/adminlogin'>    Login as Admin</Link>
 
                 </div>  </div>)}
 
