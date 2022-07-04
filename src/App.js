@@ -15,7 +15,7 @@ import UserLogin from "./Components/Registration/UserRegister/pages/Login"
 import AdminLogin from './Components/Registration/AdminRegister/pages/Login'
 import Admin from './Components/Admin/Admin'
 import Helppage from './HelpPage'
-import UserProfile from './UserProfile/UserProfile'
+import UserProfile from './Components/UserProfile/UserProfile'
 
 function App() {
   return (
