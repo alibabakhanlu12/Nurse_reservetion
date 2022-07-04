@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { signupFields } from "../constants/formFields"
 import FormAction from "./FormAction";
 import Input from "./Input";
+import { Link } from 'react-router-dom';
 
 const fields = signupFields;
 let fieldsState = {};
@@ -16,7 +17,8 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(signupState)
-    createAccount()
+    createAccount();
+    <Link to='/'></Link>
   }
 
   //handle Signup API Integration here
@@ -26,8 +28,8 @@ export default function Signup() {
   }
 
   return (
-    <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-      <div className="space-y-4">
+    <form className="mt-20 " onSubmit={handleSubmit}>
+      <div >
         {
           fields.map(field =>
             <Input
