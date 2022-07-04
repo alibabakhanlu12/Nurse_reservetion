@@ -53,6 +53,16 @@ function App() {
           <Footer />
         </Route>
 
+        {/*         
+      change Components to admin class Components */}
+        <Route path='/admin' Components={Contact} exact >
+          <Navbar />
+
+          {/* change this */}
+          <Contact />
+          <Footer />
+        </Route>
+
 
 
         <div className="min-h-full h-screen flex items-center mt-11 justify-center py-12 px-4 sm:px-6 lg:px-8">
