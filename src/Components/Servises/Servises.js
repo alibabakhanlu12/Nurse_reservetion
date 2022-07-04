@@ -18,6 +18,8 @@ function Servises() {
     const [menuItem, setMenuItem] = useState(NurseData);
     const [buttons, setButtons] = useState(allCategories);
 
+
+
     const filter = (button) => {
 
         if (button === 'All') {
@@ -28,6 +30,8 @@ function Servises() {
         const filteredData = NurseData.filter(item => item.skills === button);
         setMenuItem(filteredData)
     }
+
+
     <Helmet>
 
         <title>Servises</title>

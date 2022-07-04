@@ -20,7 +20,7 @@ li {
   justify-content: space-around;
   align-items: center;
   height: 10vh;
-  box-shadow: rgba(50, 50, 93, 0.23) 0px 30px 30px -20px;
+  box-shadow: rgba(177, 177, 187, 0.23) 0px 30px 30px -20px;
   position: sticky;
   top: 0px;
   z-index: 1;
@@ -186,17 +186,18 @@ button {
 }
 
 .dropdown .dropdown-btn {
-  padding: 15px 20px;
+  padding: 10px 17px;
   background: #fff;
   /* box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06); */
   font-weight: bold;
   color: #fff;
-  background-color: blue;
+  background-color: rgb(59, 59, 180);
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 12px;
   cursor: pointer;
+
   text-align: center;
 
 

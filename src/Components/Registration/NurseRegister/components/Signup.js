@@ -3,7 +3,7 @@ import { signupFields } from "../constants/formFields"
 import FormAction from "./FormAction";
 import Input from "./Input";
 import { Link } from 'react-router-dom'
-import '../../../../index.css'
+import '../../index.css'
 const fields = signupFields;
 let fieldsState = {};
 

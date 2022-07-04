@@ -9,8 +9,10 @@ function Menu({ menuItem }) {
                         <div className="item-container">
 
                             <img src={item.image} className='servises-image' alt="" />
-                            <h4 className='h2'> name: {item.lastName}</h4>
-                            <h6 >category:{item.skill}</h6>
+                            <h6 className='h6'> name:{item.firstName} {item.lastName}</h6>
+                            <h6 className='h6'> rate: {item.rate}</h6>
+                            <h6 className='h6'> Skill: {item.skills}</h6>
+
                         </div>
                     </div>
                 })

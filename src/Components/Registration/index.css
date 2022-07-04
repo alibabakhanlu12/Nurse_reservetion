@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 
-.Link:hover {
 
-    background-color: blue;
-
-}
 
 .nurseregister {
     margin-top: 130px;

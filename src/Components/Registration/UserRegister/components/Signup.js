@@ -28,7 +28,7 @@ export default function Signup() {
   }
 
   return (
-    <form className="mt-20 " onSubmit={handleSubmit}>
+    <form className="mt-30 " onSubmit={handleSubmit}>
       <div >
         {
           fields.map(field =>

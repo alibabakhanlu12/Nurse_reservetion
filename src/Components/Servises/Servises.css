@@ -11,7 +11,6 @@
 
  .title {
      padding: 2rem 0;
-     /* text-align: center; */
      text-align: center;
      font-size: 30px;
  }
@@ -31,14 +30,14 @@
 
  }
 
- .h2 {
-     font-size: 2rem;
+ .h6 {
+     font-size: 20px;
      font-weight: 200;
      margin: 1rem 0;
      color: aliceblue;
  }
 
- .h2:hover {
+ .h6:hover {
      cursor: pointer;
      transition: all .3s ease-in-out;
      color: #037FFF;
@@ -52,7 +51,7 @@
 
  .item {
      display: grid;
-     grid-template-columns: repeat(3, 1fr);
+     grid-template-columns: repeat(2, 1fr);
      grid-gap: 3rem;
      margin-left: -70px;
  }

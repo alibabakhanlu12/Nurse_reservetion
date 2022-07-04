@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Signup from "../components/Signup";
-import '../../../../index.css'
+import '../../index.css'
+
 
 import { Helmet } from "react-helmet"
 export default function SignupPage() {

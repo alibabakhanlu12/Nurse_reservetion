@@ -8,7 +8,6 @@ import { Helmet } from 'react-helmet'
 
 function FetchNurses() {
 
-    const [items, setItems] = useState(NurseData)
     const [item, setItem] = useState("");
     const [value, setValue] = useState();
 
@@ -34,9 +33,9 @@ function FetchNurses() {
                     } />
                 </div>
                 <div className='slider-filter'>
-                    <label> search by rate: </label>
+                    <label className='slider-filter-label'> search by rate: </label>
                     <RangeSlider
-
+                        className='slider-filter-info'
                         value={value}
                         step={1}
                         min={0}
@@ -57,11 +56,13 @@ function FetchNurses() {
                 }).map(({ id, image, username, skills, phoneNumber, rate, firstName, lastName, education, birthDate, address, country }) => (
                     <div key={id} className='card11'>
                         <img src={image} className='card-nurse-img' />
-                        <h4 className='name'>Fullname:{firstName} {lastName}</h4>
-                        <h4> skill:{skills}</h4>
+                        <div className='nurse-information'>
+                            <h4 className='name'>Fullname:{firstName} {lastName}</h4>
+                            <h4> skill:{skills}</h4>
 
-                        <h4>rate: {rate}</h4>
-                        <Link to={`/${username}`}><button className='card_button11'>Reserve Now</button></Link>
+                            <h4>rate: {rate}</h4>
+                        </div>
+                        <Link to={`/nurses/${username}`}><button className='card_button11'>More Info</button></Link>
                     </div>
 
                 ))}
@@ -76,10 +77,13 @@ function FetchNurses() {
                 }).map(({ id, image, username, skills, rate, phoneNumber, firstName, lastName, education, birthDate, address, country }) => (
                     <div key={id} className='card11'>
                         <img src={image} className='card-nurse-img' />
-                        <h4 className='name'> Name:{firstName} {lastName}</h4>
-                        <h4> skill:{skills}</h4>
-                        <h4>rate: {rate}</h4>
-                        <Link to={`/${username}`}><button className='card_button11'>Reserve Now</button></Link>
+                        <div className='nurse-information'>
+                            <h4 className='name'>Fullname:{firstName} {lastName}</h4>
+                            <h4> skill:{skills}</h4>
+
+                            <h4>rate: {rate}</h4>
+                        </div>
+                        <Link to={`/nurses/${username}`}><button className='card_button11'>More Info</button></Link>
                     </div>
 
                 ))}

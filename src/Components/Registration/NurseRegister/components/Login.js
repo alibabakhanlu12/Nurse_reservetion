@@ -4,7 +4,8 @@ import FormAction from "./FormAction";
 import FormExtra from "./FormExtra";
 import Input from "./Input";
 import { Link } from 'react-router-dom'
-import '../../../../index.css'
+import '../../index.css'
+
 
 const fields = loginFields;
 let fieldsState = {};

@@ -4,7 +4,7 @@ function ErorrPage() {
     return (
         <div>
 
-            Error 403
+            <h1 align='center'> Error 403</h1>
             <h4>your Entered URL is not correct </h4>
             <button>your Entered URL is not correct<Link to='/'>Back to Home </Link> </button>
         </div>

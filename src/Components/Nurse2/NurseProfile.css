@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 150px;
+    gap: 70px;
     margin-bottom: 40px;
 }
 
@@ -18,15 +18,17 @@
 
 .profile-images {
     width: 570px;
-    height: 590px;
+    height: 560px;
     margin-left: 30px;
+    border-radius: 12px;
 
 }
 
-.main-photo {}
+/* 
+.main-photo {} */
 
 .profile-description {
-    margin-left: 50px;
+    margin-left: 10px;
     display: flex;
     align-items: space-between;
     flex-direction: column;
@@ -88,9 +90,28 @@
 }
 
 .profile-btn {
-    background-color: red;
+    background-color: rgb(45, 52, 148);
     border-radius: 12px;
-    padding: 10px 25px;
+    padding: 10px 2px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+
 }
 
-.profile-comments {}
+/* 
+.profile-comments {} */
+
+.reservedate {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:1000px) {
+    .main-profile {
+        display: flex;
+        flex-direction: column;
+    }
+}
