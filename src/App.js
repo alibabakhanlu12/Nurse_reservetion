@@ -13,9 +13,9 @@ import UserSignup from './Components/Registration/UserRegister/pages/Signup'
 import NurseLogin from "./Components/Registration/NurseRegister/pages/Login"
 import UserLogin from "./Components/Registration/UserRegister/pages/Login"
 import AdminLogin from './Components/Registration/AdminRegister/pages/Login'
-import Admin from './Components/Admin/Admin'
+import AdminPage from './Components/Admin/Admin'
 import Helppage from './HelpPage'
-import UserProfile from './Components/UserProfile/UserProfile'
+import UserProfile from './Components/Registration/UserRegister/UserProfile'
 
 function App() {
   return (
@@ -56,10 +56,10 @@ function App() {
         </Route>
 
 
-        <Route path='/admin' Components={Admin} exact >
+        <Route path='/admin' Components={AdminPage} exact >
           <Navbar />
 
-          <Admin />
+          <AdminPage />
           <Footer />
         </Route>
         <Route path='/profile-user' Components={UserProfile} exact >

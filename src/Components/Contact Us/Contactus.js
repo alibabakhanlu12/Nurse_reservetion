@@ -3,6 +3,22 @@ import './Contactus.css';
 import { Helmet } from 'react-helmet'
 function App() {
 
+
+
+    let name = React.createRef();
+    let email = React.createRef();
+    let phone = React.createRef();
+    let message = React.createRef();
+
+
+    const handlebtn = () => {
+        console.log(name.current.value)
+        console.log(email.current.value)
+        console.log(phone.current.value)
+        console.log(message.current.value)
+
+    }
+
     return (
 
         <div>
@@ -24,26 +40,26 @@ function App() {
                                         <div className="row">
                                             <div className="col-lg-12">
                                                 <div className="form-group mt-2">
-                                                    <input className="form-control" type="text" placeholder="name" />
+                                                    <input className="form-control" type="text" ref={name} placeholder="name" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-12">
                                                 <div className="form-group mt-2">
-                                                    <input className="form-control" type="email" placeholder="email address" />
+                                                    <input className="form-control" type="email" ref={email} placeholder="email address" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-12">
                                                 <div className="form-group mt-2">
-                                                    <input className="form-control" type="text" placeholder="phone" />
+                                                    <input className="form-control" type="text" ref={phone} placeholder="phone" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-12">
                                                 <div className="form-group mt-2">
-                                                    <textarea className="form-control" rows="3" placeholder="message"></textarea>
+                                                    <textarea className="form-control" rows="3" ref={message} placeholder="message"></textarea>
                                                 </div>
                                             </div>
                                             <div className="col-lg-12">
-                                                <button type="submit" className="btn btn-danger-gradiant mt-3 ml-5 border-0 px-10 py-4"><span className='button-sumbit'> SUBMIT</span></button>
+                                                <button type="submit" onClick={handlebtn} className="btn btn-danger-gradiant mt-3 ml-5 border-0 px-10 py-4"><span className='button-sumbit'> SUBMIT</span></button>
                                             </div>
                                         </div>
                                     </form>

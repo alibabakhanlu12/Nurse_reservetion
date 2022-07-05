@@ -2,14 +2,25 @@ import { useState } from 'react';
 import { signupFields } from "../constants/formFields"
 import FormAction from "./FormAction";
 import Input from "./Input";
-import { Link } from 'react-router-dom';
-
+import { Link, useHistory } from 'react-router-dom';
+import UserProfile from '../UserProfile';
 const fields = signupFields;
 let fieldsState = {};
 
 fields.forEach(field => fieldsState[field.id] = '');
 
 export default function Signup() {
+
+
+  const navigate = useHistory();
+  const openprofile = (id) => {
+    navigate('/user-profile', {
+      state: {
+        id: 'sdfjkd'
+      }
+    })
+
+  }
   const [signupState, setSignupState] = useState(fieldsState);
 
   const handleChange = (e) => setSignupState({ ...signupState, [e.target.id]: e.target.value });
@@ -19,7 +30,9 @@ export default function Signup() {
     console.log(signupState)
     createAccount();
     <Link to='/'></Link>
+    openprofile();
   }
+
 
   //handle Signup API Integration here
   const createAccount = () => {
